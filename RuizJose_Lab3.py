@@ -99,4 +99,19 @@ class Grafo():
                     return resultado #Retorna resultado
         # elimina y retorna el elemento de la ruta
         ruta.pop() 
-        return None  
+        return None 
+    
+if __name__ == "__main__":
+     #Creación del grafo
+    grafo = Grafo(5, dirigido=False)
+    #Añadir nodos al grafo
+    grafo.añadir_nodo(0, 1)
+    grafo.añadir_nodo(0, 2)
+    grafo.añadir_nodo(1, 3)
+    grafo.añadir_nodo(2, 3)
+    grafo.añadir_nodo(3, 4)
+    #Mostrar la lista de adyacencia
+    grafo.mostrar_lista_adyacencia()
+    ruta_transversal = []
+    ruta_transversal = grafo.dfs(0, 3)
+    print(f" La ruta trasversal desde el nodo 0 hasta el nodo 3 es {ruta_transversal}") 
