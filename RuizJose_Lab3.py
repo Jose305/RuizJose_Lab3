@@ -82,13 +82,13 @@ class Grafo():
 
 if __name__ == "__main__":
     #Creación del grafo
-    print("\n CASO DE PRUEBA 1")
+    print("\n CASO DE PRUEBA 2")
     grafo1 = Grafo(3, dirigido=True)
     #Añade los nodos
     grafo1.añadir_nodo(0, 2, 1)
-    grafo1.añadir_nodo(2, 0, 2)
+    grafo1.añadir_nodo(0, 1, 2)
     grafo1.añadir_nodo(2, 1, 3)
-    grafo1.añadir_nodo(1, 0, 4)
+    grafo1.añadir_nodo(1, 2, 4)
     #Impresión de la lista adyacente
     grafo1.mostrar_lista_adyacencia()
     #Generar la ruta transversal
