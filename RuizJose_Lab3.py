@@ -38,7 +38,7 @@ class Grafo():
 
     #Añade un nodo al grafo
     def añadir_nodo(self, nodo1, nodo2, peso=1):
-        #Ingreso del nodo2 a la lista de adyacencia del nodo1
+         #Ingreso del nodo2 a la lista de adyacencia del nodo1
         self.m_adyacencia_lista[nodo1].add((nodo2, peso))
         #Estructura condicional en caso de que no sea dirigido
         if not self.m_dirigido: 
@@ -81,16 +81,17 @@ class Grafo():
         return None 
 
 if __name__ == "__main__":
-     #Creación del grafo
-    grafo = Grafo(5, dirigido=False)
-    #Añadir nodos al grafo
-    grafo.añadir_nodo(0, 1)
-    grafo.añadir_nodo(0, 2)
-    grafo.añadir_nodo(1, 3)
-    grafo.añadir_nodo(2, 3)
-    grafo.añadir_nodo(3, 4)
-    #Mostrar la lista de adyacencia
-    grafo.mostrar_lista_adyacencia()
-    ruta_transversal = []
-    ruta_transversal = grafo.dfs(0, 3)
-    print(f" La ruta trasversal desde el nodo 0 hasta el nodo 3 es {ruta_transversal}")
+    #Creación del grafo
+    print("\n CASO DE PRUEBA 1")
+    grafo1 = Grafo(3, dirigido=True)
+    #Añade los nodos
+    grafo1.añadir_nodo(0, 2, 3)
+    grafo1.añadir_nodo(2, 0, 2)
+    grafo1.añadir_nodo(2, 1, 5)
+    grafo1.añadir_nodo(1, 0, 4)
+    #Impresión de la lista adyacente
+    grafo1.mostrar_lista_adyacencia()
+    #Generar la ruta transversal
+    ruta_transversal3 = []
+    ruta_transversal3 = grafo1.dfs(0, 2)
+    print(f" La ruta trasversal desde el nodo 0 hasta el nodo 2 es {ruta_transversal3}")
