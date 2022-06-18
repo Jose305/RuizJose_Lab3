@@ -85,9 +85,9 @@ if __name__ == "__main__":
     print("\n CASO DE PRUEBA 1")
     grafo1 = Grafo(3, dirigido=True)
     #Añade los nodos
-    grafo1.añadir_nodo(0, 2, 3)
+    grafo1.añadir_nodo(0, 2, 1)
     grafo1.añadir_nodo(2, 0, 2)
-    grafo1.añadir_nodo(2, 1, 5)
+    grafo1.añadir_nodo(2, 1, 3)
     grafo1.añadir_nodo(1, 0, 4)
     #Impresión de la lista adyacente
     grafo1.mostrar_lista_adyacencia()
